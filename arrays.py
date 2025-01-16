@@ -15,22 +15,41 @@
 
 # Declare an array and its size.
 # Print the result ,Call the setminimum and setmaxi functions to find the minimum and maximum values.
-def set_mini(A):
-    mini = float("inf") #initialize mini as  positive infinity
-    for i in A:
-        if i < mini:
-            mini = i
-    return mini 
+# def set_mini(A):
+#     mini = float("inf") #initialize mini as  positive infinity
+#     for i in A:
+#         if i < mini:
+#             mini = i
+#     return mini 
 
-def set_maxi(A):
-    maxi = float("-inf") #initialize maxi as negative infinity
-    for i in A:
-        if i > maxi:
-            maxi = i
-    return maxi
+# def set_maxi(A):
+#     maxi = float("-inf") #initialize maxi as negative infinity
+#     for i in A:
+#         if i > maxi:
+#             maxi = i
+#     return maxi
+
+# if __name__ == "__main__":
+#     A = [11, 22, 43, 4, 5]
+#     print("The minimum element in the array is:",set_mini(A))
+
+#Python programm to reverse an array by swapping elements
+def arrayreverse(A):
+    n = len(A)
+    #iterate over the first half of the array and for every index i;
+    #swap the element at index i with the element at index n-i-1
+    for i in range(n // 2):
+        temp = A[i]
+        A[i] = A[n-i-1]
+        A[n-i-1] = temp
 
 if __name__ == "__main__":
-    A = [11, 22, 43, 4, 5]
-    print("The minimum element in the array is:",set_mini(A))
+    A = [0,1,2,3,4,5]
+    print("Original array:", A)
+    arrayreverse(A)
+    print("Reversed array:", A)
 
-    
+
+
+
+
