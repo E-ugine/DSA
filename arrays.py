@@ -34,20 +34,28 @@
 #     print("The minimum element in the array is:",set_mini(A))
 
 #Python programm to reverse an array by swapping elements
-def arrayreverse(A):
-    n = len(A)
-    #iterate over the first half of the array and for every index i;
-    #swap the element at index i with the element at index n-i-1
-    for i in range(n // 2):
-        temp = A[i]
-        A[i] = A[n-i-1]
-        A[n-i-1] = temp
+# def arrayreverse(A):
+#     n = len(A)
+#     #iterate over the first half of the array and for every index i;
+#     #swap the element at index i with the element at index n-i-1
+#     for i in range(n // 2):
+#         temp = A[i]
+#         A[i] = A[n-i-1]
+#         A[n-i-1] = temp
 
-if __name__ == "__main__":
-    A = [0,1,2,3,4,5]
-    print("Original array:", A)
-    arrayreverse(A)
-    print("Reversed array:", A)
+# if __name__ == "__main__":
+#     A = [0,1,2,3,4,5]
+#     print("Original array:", A)
+#     arrayreverse(A)
+#     print("Reversed array:", A)
+
+# import array as arr
+
+# a = arr.array("i", [1,2,3])
+
+# for i in range(0,3):
+#     print(a[i], end = " ")
+
 
 
 
