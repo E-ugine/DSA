@@ -32,7 +32,7 @@ myList = ["apple", "banana", "cherry", "orange", "kiwi", "melon"]
 for i in range(len(myList)):
     print(myList[i])
 
-#List Comprehension 
+#List Comprehensio
 Teams = ["Man Utd", "Chelsea", "Arsenal", "Liverpool", "Tottenham"]
 newTeams = [x for x in Teams if "l" in x]
 print(newTeams) 
