@@ -37,4 +37,32 @@ Teams = ["Man Utd", "Chelsea", "Arsenal", "Liverpool", "Tottenham"]
 newTeams = [x for x in Teams if "l" in x]
 print(newTeams) 
 
+myList = ["Eugine", "Owuor", "Agolla"]
+myList.sort()
+print(myList)
+myList = [10,3,45,8,56]
+myList.sort(reverse=True) # sorts in descending order
+print(myList)
+
+fruits = ["Orange", "Mango","banana","pie"]
+fruits.sort(key=str.lower) # This is because sort function is case sensitive
+print(fruits)
+
+thisList = ["Football", "Rugby", "F1","Handball", "Kabadii"]
+myList= thisList.copy()
+print(myList)
+
+thisList = ["Football", "Rugby", "F1","Handball", "Kabadii"]
+myList = ["F1"]
+for x in thisList:
+    myList.append(x)
+print(myList)
+
+thisList = ["Football", "Rugby", "F1","Handball", "Kabadii"]
+myList = ["F1"]
+myList.extend(thisList)
+print(myList) 
+
 """
+   
+
