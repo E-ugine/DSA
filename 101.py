@@ -55,7 +55,7 @@ print(myList)
 thisList = ["Football", "Rugby", "F1","Handball", "Kabadii"]
 myList = ["F1"]
 for x in thisList:
-    myList.append(x)
+    myList.append(x) #
 print(myList)
 
 thisList = ["Football", "Rugby", "F1","Handball", "Kabadii"]
