@@ -61,8 +61,92 @@ print(myList)
 thisList = ["Football", "Rugby", "F1","Handball", "Kabadii"]
 myList = ["F1"]
 myList.extend(thisList)
-print(myList) 
+print(myList)
+
+#Sets
+myset = set(("This","That","Those"))
+print(myset)
+
+mySet = {1,2,3}
+hisSet = {4,5,6}
+ourSet = mySet.union(hisSet)
+print(ourSet)
+
+mySet = {1,2,3}
+hisSet = {4,5,6}
+ourSet = mySet | hisSet
+print(ourSet)
+
+# dictionaries
+myDict = {
+    "make": "Audi",
+    "model": "Audi Q3",
+    "price": 2377999
+}
+
+print(myDict)
+print(myDict["model"])
+
+myDict = {
+    "make": "Audi",
+    "model": "Audi Q3",
+    "price": 2377999
+}
+
+for x in myDict:
+    print(x)
+    print(myDict[x])
+
+myDict = {
+    "make": "Audi",
+    "model": "Audi Q3",
+    "price": 2377999
+}
+
+for x,y in myDict.items():
+    print(x,y) 
+car1 = {
+     "make": "Audi",
+    "model": "Audi Q3",
+    "price": 2377999
+}
+
+car2 = {
+     "make": "Audi",
+    "model": "Audi A5",
+    "price": 1377999
+}
+
+car3 = {
+     "make": "Audi",
+    "model": "Audi Q5",
+    "price": 3377999
+}
+
+myCars = {
+    "car1": car1,
+    "car2": car2,
+    "car3": car3
+}
+
+#print(myCars)
+#print(myCars["car2"] ["model"])
+
+#Loop through
+
+for key, value in myCars.items():
+    print(key)
+    for key, value in value.items():
+        print(f" {key}: {value} ")       
 
 """
+
+
+
+
+
+
+
+
    
 
