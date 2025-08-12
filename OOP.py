@@ -10,9 +10,6 @@ class Employee:
 emp1 = Employee("Madmax", 30)
 emp2 = Employee("King", 40)
 
-print(emp1)
-"""
-
 class Dog:
     species = "Canis familiaris" #class attribute, shared by all dogs
 
@@ -30,4 +27,26 @@ class Dog:
 #instantiating the dog class        
 Scooby = Dog("Scooby", 12)
 print(Scooby.description())
+
+print(emp1)
+
+class Car:
+    def __init__(self,color,mileage):
+        self.color = color
+        self.mileage = mileage
+
+    def description(self):
+        print(f"The {self.color} car has {self.mileage} miles")    
+
+blueCar = Car("blue", 20000)  
+redCar = Car("red",30000)
+blueCar.description()
+redCar.description() 
+"""
+
+
+
+ 
+
+
     
