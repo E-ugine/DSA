@@ -42,7 +42,55 @@ blueCar = Car("blue", 20000)
 redCar = Car("red",30000)
 blueCar.description()
 redCar.description() 
+
+
+
+
+# Polymorphism ~ Existing in many forms
+# You have a universal command(method) that works on many forms. 
+#For instance here dog and cat both have a .speak() method but returns different sounds
+
+class Dog:
+    def speak(self):
+        return "Woof!"
+
+class Cat:
+    def speak(self):
+        return "Meow!"
+
+animals = [Dog(), Cat()]
+
+for animal in animals:
+    print(animal.speak())
+
+# Real-World Analogy. Think about the “pay” action at checkout:
+#Credit Card → swipes card
+#Mobile Pay → scans QR
+#Cash → hands over notes
+#The action name ("pay") is the same, but each method is implemented differently. 
+
 """
+# Polymorphism with Inheritance
+
+class Car():
+    def start_engine(self):
+        raise NotImplementedError("Subclasses must implement this method")
+    
+class PetrolCar(Car):
+    def start_engine(self):
+        return "Staring petrol engine....Vrroom!!!" 
+
+class ElectricCar(Car):
+    def start_engine(self):
+        return "Starting Electric engine ....Whirrr!!!1"
+
+cars = [PetrolCar(), ElectricCar()]
+for car in cars:
+    print(car.start_engine())            
+
+
+    
+
 
 
 
