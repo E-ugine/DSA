@@ -48,7 +48,7 @@ redCar.description()
 
 # Polymorphism ~ Existing in many forms
 # You have a universal command(method) that works on many forms. 
-#For instance here dog and cat both have a .speak() method but returns different sounds
+#For instance, here dog and cat both have a .speak() method but returns different sounds
 
 class Dog:
     def speak(self):
@@ -67,9 +67,7 @@ for animal in animals:
 #Credit Card → swipes card
 #Mobile Pay → scans QR
 #Cash → hands over notes
-#The action name ("pay") is the same, but each method is implemented differently. 
-
-"""
+#The action name ("pay") is the same, but each method is implemented differently.
 # Polymorphism with Inheritance
 
 class Car():
@@ -86,7 +84,34 @@ class ElectricCar(Car):
 
 cars = [PetrolCar(), ElectricCar()]
 for car in cars:
-    print(car.start_engine())            
+    print(car.start_engine())             
+
+    
+# Abstraction ~ Hiding unnecessary details and showing only what's important
+# Likw driving a car without having to know how the engine  combusts fuel
+
+#A smartphone is a great real-life example of data abstraction 
+#you can make calls or take photos without knowing how signals or storage work. 
+#Only essential features are shown, complex details are hidden.
+
+from abc import ABC, abstractmethod
+
+class Greet(ABC):
+    @abstractmethod
+    def say_hello(self):
+        pass # abstract method
+
+class English(Greet):
+    def say_hello(self):
+        return "Hello" 
+
+greeting = English()
+print(greeting.say_hello())           
+"""
+
+
+
+
 
 
     
