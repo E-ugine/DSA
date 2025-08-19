@@ -106,8 +106,64 @@ class English(Greet):
         return "Hello" 
 
 greeting = English()
-print(greeting.say_hello())           
+print(greeting.say_hello())  
+
+What it hides: Implementation details.
+
+Focus: What a class/object can do.
+
+How it’s done: Using abstract classes, interfaces, or methods that only define behavior but don’t explain how it’s achieved.
+
+Goal: To provide a clear, simple, high-level blueprint for interaction.
+
+#Encapsulation
+# Hiding internal data/details of a class and only exposing what's necessary.
+# It helps protecting important data from being changed directly and keeps code secure and organized.
+#What it hides: Internal state/data (variables).
+
+#Focus: How data is accessed and modified.
+
+#How it’s done: By making variables private or protected and controlling access through getter/setter methods or properties.
+
+#Goal: To protect data from direct, unsafe manipulation.
+
+#Public (name) → can be accessed from anywhere.
+
+#Protected (_name) → should not be accessed directly outside the class (just a convention).
+
+#Private (__name) → name-mangled by Python to make direct access harder.
+
+class BankAccount():
+    def __init__(self,owner, balance):
+        self.owner = owner # public attribute
+        self._balance = balance # protected attribute
+        self.__pin = 1234 # private attribute
+        
+    def deposit(self,amount):
+        self._balance += amount
+        return f"Deposited {amount}. New balance {self._balance}"
+    
+    def withdraw(self, amount, pin):
+        if pin == self.__pin:
+            if amount <= self._balance:
+                self._balance -= amount
+                return f"Withdrew {amount}. Remaining balance is {self._balance}"
+            else:
+                return f"Insufficient funds"
+        else:
+            return f"Incorrect PIN"
+        
+account = BankAccount("Eugine", 135000)
+
+print(account.deposit(500))
+print(account.withdraw(20000,124))
+print(account._balance)
+print(account._BankAccount__pin)
 """
+
+
+
+
 
 
 
